@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS variable</title>
+        <style>
+            :root {
+                --primary-color: #222;
+                --secondary-color: #666;
+                --font-size: 14px;
+            }
+
+            h1 {
+                color: var(--primary-color);
+            }
+
+            p {
+                color: var(--secondary-color);
+                font-size: var(--font-size);
+            }
+
+            .css-var {
+                border: 2px solid var(--primary-color);
+                width: calc(100% - 300px);
+                margin: 0 auto;
+            }
+
+            section {
+                display: grid;
+                grid-template-columns: 400px calc(100% - 400px - 20px);
+                grid-template-rows: 400px;
+                border: 2px solid var(--primary-color);
+                gap: 20px;
+            }
+
+            .sidebar {
+                background-color: pink;
+            }
+            .main {
+                background-color: skyblue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS Variable</h1>
+        <div class="css-var">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
+                reiciendis porro temporibus minus illo repudiandae perspiciatis
+                nisi voluptates vitae laborum, non recusandae quasi a voluptate
+                laudantium, quaerat sequi, delectus quo? Molestiae
+                necessitatibus corrupti, tempora error alias dolorem dolor, rem
+                expedita, officiis architecto id sequi facere explicabo
+                perferendis. Alias modi consequuntur perferendis eum in id rerum
+                optio facilis assumenda at possimus vero nobis sapiente nihil
+                quod, dolore, voluptas saepe corporis dolor eaque mollitia. Hic
+                neque dolore quibusdam doloribus quas. Ad, eum rerum expedita
+                quos ut dolorum molestiae accusamus perspiciatis suscipit magni
+                voluptate quidem similique dicta enim ex labore accusantium, rem
+                corrupti?
+            </p>
+        </div>
+
+        <section>
+            <div class="sidebar">sidebar</div>
+            <div class="main">main content</div>
+        </section>
+    </body>
+</html>
