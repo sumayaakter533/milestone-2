@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Module 11.3 - Overflow</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            section {
+                padding: 15px;
+                justify-content: center;
+                display: flex;
+                gap: 20px;
+            }
+            h1 {
+                text-align: center;
+                padding: 15px;
+            }
+            .box {
+                width: 400px;
+                height: 200px;
+                background-color: pink;
+                border: 2px solid crimson;
+                padding: 15px;
+                /* overflow-y: auto; */
+            }
+            .ellipsis {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            #box1 {
+                /* overflow: hidden; */
+                /* overflow-x: hidden; */
+                overflow: scroll;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS overflow & text overflow [ellipsis]</h1>
+        <section>
+            <div class="box" id="box1">
+                <h3>Text box 1</h3>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Voluptatem sit sunt cum assumenda quod veritatis, non,
+                    exercitationem, fugiat molestiae officia repellendus!
+                    Eveniet cupiditate eaque recusandae aspernatur. Quos totam
+                    numquam eum earum esse corporis! Repellat in deserunt veniam
+                    ab eaque vitae qui quod repellendus illum quibusdam?
+                    Praesentium optio asperiores quisquam ducimus odit adipisci
+                    aliquid a quibusdam commodi et, harum, at quidem. Facere
+                    recusandae veritatis facilis laborum numquam corporis at
+                    nulla reprehenderit quam molestias aliquam possimus omnis,
+                    nihil, ipsum quidem consectetur tempora alias ducimus
+                    accusamus exercitationem fugiat! Vero distinctio pariatur,
+                    quis temporibus dolore nulla, excepturi nesciunt officiis
+                    accusantium eveniet deserunt veniam vel minus reprehenderit
+                    dicta hic natus?
+                </p>
+            </div>
+            <div class="box" id="box2">
+                <h3>Text box 2</h3>
+                <p
+                    class="ellipsis"
+                    title="Veniam adipisci laudantium illo quaerat possimus corporis
+                voluptas autem blanditiis tempora explicabo eaque temporibus
+                ea, dignissimos est odit voluptatibus neque quidem impedit
+                dolor! Dicta, qui dolore corporis mollitia officia magnam
+                enim quo fuga rem est consequatur debitis recusandae
+                perferendis dolorem deleniti vel doloribus impedit nulla
+                laudantium quod saepe rerum reprehenderit sunt! Nihil, nisi
+                magni ipsam doloremque deleniti vitae odit voluptatum
+                repellendus ea, ducimus architecto, aspernatur incidunt vel
+                eligendi iste quasi perferendis adipisci animi officia saepe">
+                    Veniam adipisci laudantium illo quaerat possimus corporis
+                    voluptas autem blanditiis tempora explicabo eaque temporibus
+                    ea, dignissimos est odit voluptatibus neque quidem impedit
+                    dolor! Dicta, qui dolore corporis mollitia officia magnam
+                    enim quo fuga rem est consequatur debitis recusandae
+                    perferendis dolorem deleniti vel doloribus impedit nulla
+                    laudantium quod saepe rerum reprehenderit sunt! Nihil, nisi
+                    magni ipsam doloremque deleniti vitae odit voluptatum
+                    repellendus ea, ducimus architecto, aspernatur incidunt vel
+                    eligendi iste quasi perferendis adipisci animi officia saepe
+                </p>
+            </div>
+            <div class="box" id="box3">
+                <h3>Text box 3</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Consequuntur, vel quos labore rem nisi totam nobis molestiae
+                    deleniti minima quae.
+                </p>
+            </div>
+        </section>
+    </body>
+</html>
