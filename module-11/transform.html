@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Explore CCS3 Transform Properties</title>
+        <style>
+            #scale {
+                display: flex;
+                justify-content: center;
+                border: 1px solid silver;
+                background: #f1f1f1;
+                padding: 60px 30px;
+                gap: 100px;
+                /* overflow: hidden; */
+            }
+
+            .container,
+            .inner-item {
+                width: 200px;
+                height: 200px;
+                background: pink;
+                border: 2px solid crimson;
+                box-sizing: border-box;
+            }
+
+            .inner-item {
+                background: skyblue;
+                border: 4px solid blue;
+            }
+
+            /* transform scale property */
+            .inner-item-1 {
+                transform: scale(0.5);
+            }
+
+            /* transform rotate property */
+            .inner-item-2 {
+                transform: rotate(-45deg);
+            }
+
+            /* transform translate property */
+            .inner-item-3 {
+                transform: translate(-20px, 40px);
+            }
+
+            /* transform skew property */
+            .inner-item-4 {
+                transform: skew(30deg, 20deg);
+            }
+
+            /* transform scale, rotate, skew, translate all */
+            .inner-item-5 {
+                transform: scale(0.6) translate(50%, 50px) skew(-30deg)
+                    rotate(-45deg);
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center">CCS3 Transform Properties</h1>
+        <section id="scale">
+            <div class="container">
+                <div class="inner-item inner-item-1">
+                    <h1>Transform - scale()</h1>
+                </div>
+            </div>
+            <div class="container">
+                <div class="inner-item inner-item-2">
+                    <h2>Transform - rotate()</h2>
+                </div>
+            </div>
+            <div class="container">
+                <div class="inner-item inner-item-3">
+                    <h2>Transform - translate</h2>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="inner-item inner-item-4">
+                    <h4>Transform - skew</h4>
+                </div>
+            </div>
+            <div class="container">
+                <div class="inner-item inner-item-5">
+                    <h1>Transform - scale, rotate, skew & translate</h1>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
