@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Animation Transition</title>
+        <style>
+            .box {
+                width: 100px;
+                height: 100px;
+                background: red;
+                /* property name | duration | easing function | delay */
+                /* transition: all linear 0.4s; */
+                /* transition: width 1s linear 0.5s, background-color 1s ease-in 1s; */
+                transition: transform 1s;
+                margin-left: 100px;
+            }
+            .box:hover {
+                /* width: 300px;
+                background-color: blue; */
+                transform: rotate(45deg) translateX(150px) scale(1.5);
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="text-align: center">CSS3 Animation Transition</h1>
+        <section id="animation">
+            <div class="box"></div>
+        </section>
+    </body>
+</html>
